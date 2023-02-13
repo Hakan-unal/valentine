@@ -35,22 +35,25 @@ const LandingPageContent = (props) => {
       else if (counter === 5) setImagePath(photo6)
       else if (counter === 6) setImagePath(photo7)
       else if (counter === 7) setImagePath(photo1)
+      else if (counter === 8) counter = 1
+
       setIsModalOpen(true)
-      counter++
+      counter !== 8 && counter++
+
     }, 3000)
   }, [])
 
   return (
     <Row>
-      <Col xs={{ size: 6, offset: 9 }}>
+      <Col >
         <Image
-          width={300}
+          width={"100vw"}
 
           src={imagePath}
         />
       </Col>
 
-      <Modal footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+      <Modal title="14 Şubat" footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <p>Date With me ??? &hearts;</p>
       </Modal>
     </Row>
