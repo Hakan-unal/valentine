@@ -54,7 +54,7 @@ const LandingPageContent = (props) => {
       </Col>
 
       <Modal title="14 Şubat" footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-        <p>Date With me ??? &hearts;</p>
+        <p>Date With me ?? &hearts;</p>
       </Modal>
     </Row>
   );
